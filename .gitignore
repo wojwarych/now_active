@@ -1,0 +1,21 @@
+# General ignore
+.idea/
+*.iml
+target/
+*.zip
+*.sublime-project
+*.sublime-workspace
+
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+#envs
+.env
+env
+# testing
+/coverage
+#sqlite
+db.sqlite3
