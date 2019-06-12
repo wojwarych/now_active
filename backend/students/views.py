@@ -1,3 +1,4 @@
+from django.shortcuts import redirect
 from django.views.generic.base import TemplateView
 
 # Create your views here.
@@ -14,6 +15,8 @@ class HomeView(ExtraContext, TemplateView):
 
     template_name = "students/home.html"
 
+    def get(self, request, *args, **kwargs):
+        return redirect("upcoming-classes")
 
 
 class UpcomingClasses(ExtraContext, TemplateView):
