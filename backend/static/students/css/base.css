@@ -1,0 +1,10 @@
+div.my-container {
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

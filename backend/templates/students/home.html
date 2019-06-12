@@ -1,0 +1,36 @@
+{% extends "students/base.html" %}
+
+{% block main_body %}
+  <div class="container my-container">
+  <div class="row">
+    <div class="col">
+      <div class="row">
+        Company Logo
+      </div>
+      <div class="row">
+        <div class="col">
+          School Avatar
+        </div>
+        <div class="col">
+          School Name
+        </div>
+      </div>
+      <div class="row">
+        <ul>
+          <li>{% url 'upcoming-classes' as upcoming %} <a href="{{ upcoming }}">Upcoming classes</a></li>
+          <li>{% url 'additional-attendance' as additional %} <a href="{{ additional }}">Additional Attendance</a></li>
+          <li>{% url 'settlements' as settle %} <a href="{{ settle }}">Settlements</a></li>
+          <li>{% url 'signups' as signups %} <a href="{{ signups }}">Signup for Class</a></li>
+          <li>{% url 'personal-detail' as detail %} <a href="{{ detail }}">Personal Data</a></li>
+        </ul>
+      </div>
+      <div class="row">
+        Contact
+      </div>
+    </div>
+    <div class="col-8">
+      Main content
+    </div>
+  </div>
+</div>
+{% endblock %}
