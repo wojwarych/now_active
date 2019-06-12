@@ -1,6 +1,7 @@
 div.base {
   margin-left: 0;
   margin-right: 0;
+  height: 100vh;
 }
 
 ul.main-nav {
@@ -9,8 +10,22 @@ ul.main-nav {
   padding: 0;
 }
 
+li a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #cfcfe1;
+  color: #000;
+  text-decoration: none;
+}
+
 div.sidebar {
   background-color: #e6e6fa;
-  min-height: 100%;
-  height: : 100%;
+}
+
+div.baserow {
+  height: inherit;
 }

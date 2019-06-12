@@ -10,15 +10,21 @@ from .views import (
 )
 
 urlpatterns = [
-    path('', HomeView.as_view()),
-    path('upcoming_classes/', UpcomingClasses.as_view(),
+    path('', HomeView.as_view(extra_context={'title': 'Home'})),
+    path('upcoming_classes/',
+         UpcomingClasses.as_view(extra_context={'title': 'Upcoming Classes'}),
          name="upcoming-classes"),
-    path('additional_attendance/', AdditionalAttendance.as_view(),
+    path('additional_attendance/',
+         AdditionalAttendance.as_view(
+                            extra_context={'title': 'Additional Attendance'}),
          name="additional-attendance"),
-    path('settlements/', Settlements.as_view(),
+    path('settlements/',
+         Settlements.as_view(extra_context={'title': 'Settlements'}),
          name="settlements"),
-    path('signups/', SignupClass.as_view(),
+    path('signups/',
+         SignupClass.as_view(extra_context={'title': 'Signup Class'}),
          name="signups"),
-    path('personal_detail/', PersonalDetail.as_view(),
+    path('personal_detail/',
+         PersonalDetail.as_view(extra_context={'title': 'Personal Details'}),
          name="personal-detail")
 ]
