@@ -1,6 +1,7 @@
 from django.shortcuts import redirect
 from django.views.generic.base import TemplateView
 
+
 # Create your views here.
 class ExtraContext(object):
     extra_context = {}
