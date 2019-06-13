@@ -16,8 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from students.views import SignInView, SignOutView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('signin/', SignInView.as_view(extra_context={}),
+         name="sign-in"),
+    path('signout/', SignOutView.as_view(extra_context={}),
+         name="sign-out"),
     path('home/', include('students.urls'))
 ]
