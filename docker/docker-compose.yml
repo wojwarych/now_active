@@ -2,11 +2,21 @@ version: '3.7'
 
 services:
   backend:
+    image: now_active_backend
     build:
       context: ..
     depends_on:
       - "db"
     volumes:
       - ../backend:/backend
+    container_name: now_active_backend
+    networks:
+      - now_active_network
   db:
     image: postgres
+    container_name: now_active_postgres
+    networks:
+      - now_active_network
+networks:
+  now_active_network:
+    name: now_active_network

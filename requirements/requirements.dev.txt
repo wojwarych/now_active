@@ -1,3 +1,4 @@
 -r requirements.base.txt
+flake8==3.7.7
 pytest==4.4.1
 pytest-django==3.4.8
