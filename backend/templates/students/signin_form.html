@@ -1,0 +1,12 @@
+{% extends "students/form_base.html" %}
+  {% block form_template %}
+    <div class="col form-wrapper">
+      <form class="signin" action="/signin/" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="button-holder">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  {% endblock %}

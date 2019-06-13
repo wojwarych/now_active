@@ -1,7 +1,27 @@
 div.base {
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
   height: 100vh;
+}
+
+div.form-base {
+  margin: auto;
+  height: 100vh;
+}
+
+div.form-wrapper {
+  height: inherit;
+}
+
+form.signin {
+  margin-top:25%;
+}
+
+form.signin p {
+  text-align: center;
+}
+
+div.button-holder {
+  text-align: center;
 }
 
 ul.main-nav {
@@ -10,13 +30,13 @@ ul.main-nav {
   padding: 0;
 }
 
-li a {
+a {
   display: block;
   color: #000;
   text-decoration: none;
 }
 
-li a:hover {
+a:hover {
   background-color: #cfcfe1;
   color: #000;
   text-decoration: none;
