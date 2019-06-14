@@ -25,5 +25,6 @@ urlpatterns = [
          name="sign-in"),
     path('signout/', SignOutView.as_view(extra_context={}),
          name="sign-out"),
-    path('home/', include('students.urls'))
+    path('home/', include('students.urls')),
+    path('manager/', include('manager.urls'))
 ]

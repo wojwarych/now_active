@@ -60,10 +60,10 @@ class SignInView(ExtraContext, FormView):
     redirect_field_name = "redirect_to"
     template_name = "students/signin_form.html"
     form_class = AuthenticationForm
-    success_url = '/home/'
 
     def form_valid(self, form):
         auth_login(self.request, form.get_user())
+        self.success_url = "/manager/" if form.get_user().is_staff else "/home/"
         return super(SignInView, self).form_valid(form)
 
 
