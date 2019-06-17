@@ -56,7 +56,9 @@ class SignInView(ExtraContext, FormView):
 
     def form_valid(self, form):
         auth_login(self.request, form.get_user())
-        self.success_url = "/manager/" if form.get_user().is_staff else "/home/"
+        self.success_url = ("/manager/"
+                            if form.get_user().is_staff
+                            else "/home/")
         return super(SignInView, self).form_valid(form)
 
 
