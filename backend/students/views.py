@@ -5,17 +5,10 @@ from django.shortcuts import redirect
 from django.views.generic import FormView, RedirectView
 from django.views.generic.base import TemplateView
 
+from utils.extra_context import ExtraContext
+
 
 # Create your views here.
-class ExtraContext(object):
-    extra_context = {}
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context.update(self.extra_context)
-        return context
-
-
 class HomeView(LoginRequiredMixin, ExtraContext, TemplateView):
     login_url = "/signin/"
     redirect_field_name = "redirect_to"
