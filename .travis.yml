@@ -21,4 +21,4 @@ branches:
   except:
   - /wip*/
 script:
-  - docker-compose -f $DOCKER_FILE run backend pytest ./backend/
+  - docker-compose -f $DOCKER_FILE run backend pytest
