@@ -8,7 +8,7 @@ env:
 services:
   - docker
 install:
-  - pip install -r requirements.dev.txt
+  - pip install -r ./requirements/requirements.dev.txt
 before_script:
 # Let's stop postgresql
   - sudo service postgresql stop
