@@ -1,13 +1,14 @@
+dist: xenial
 language: python
 python:
   - "3.7"
 # command to install dependencies
 env:
-  - DOCKER_FILE=docker/docker-compose-dev.yml
+  - DOCKER_FILE=docker/docker-compose.dev.yml
 services:
   - docker
 install:
-  - pip install -r requirements.dev.txt
+  - pip install -r ./requirements/requirements.dev.txt
 before_script:
 # Let's stop postgresql
   - sudo service postgresql stop
@@ -20,4 +21,4 @@ branches:
   except:
   - /wip*/
 script:
-  - docker-compose -f $DOCKER_FILE run backend pytest ./backend/
+  - docker-compose -f $DOCKER_FILE run backend pytest

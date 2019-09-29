@@ -1,5 +1,5 @@
-{% extends "students/form_base.html" %}
-  {% block form_template %}
+{% extends "forms/form_base.html" %}
+{% block form_template %}
     <div class="col form-wrapper">
       <form class="signin" action="/signin/" method="post">
         {% csrf_token %}
@@ -9,4 +9,4 @@
         </div>
       </form>
     </div>
-  {% endblock %}
+{% endblock %}
