@@ -1,0 +1,15 @@
+{% extends "manager/base.html" %}
+  {% block main_body %}
+    <div class="row">
+      Add new
+    </div>
+    <div class ="row">
+      <ul>
+        {% for group in object_list %}
+          <li>{{ group }}</li>
+          {% empty %}
+          <li>No data yet.</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endblock %}

@@ -1,0 +1,29 @@
+<div class="col sidebar">
+  <div class="row">
+    <div class="col">
+      Company Logo
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      School Avatar
+    </div>
+    <div class="col">
+      School Name
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <ul class="main-nav">
+        <li>{% url 'students-list' as students_list %} <a href="{{ students_list }}">Students</a></li>
+        <li>{% url 'trainers-list' as trainers_list %} <a href="{{ trainers_list }}">Trainers</a></li>
+        <li>{% url 'groups-list' as groups_list %} <a href="{{ groups_list }}">Groups</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      Contact
+    </div>
+  </div>
+</div>

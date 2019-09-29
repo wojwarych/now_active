@@ -9,6 +9,7 @@ services:
       - "db"
     volumes:
       - ../backend:/backend
+      - ../docker:/docker
     container_name: now_active_backend
     networks:
       - now_active_network
