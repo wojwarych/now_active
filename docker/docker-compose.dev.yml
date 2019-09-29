@@ -6,9 +6,8 @@ services:
       context: ..
       dockerfile: ./docker/Dockerfile
       args:
-        - REQUIREMENTS=./requirements/requirements.dev.txt
-    command: >
-      sh -c "python manage.py runserver 0.0.0.0:8000"
+        - REQUIREMENTS=/tmp/requirements/requirements.dev.txt
+    command: bash ../docker/run.sh -d
     depends_on:
       - "db"
     ports:
