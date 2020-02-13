@@ -3,6 +3,7 @@ from django.urls import path
 from .views import (
     GroupsList,
     ManagerView,
+    StudentCreate,
     StudentsList,
     TrainersList,
 )
@@ -20,4 +21,5 @@ urlpatterns = [
         extra_context={"title": "Groups"}),
         name="groups-list",
     ),
+    path("student-add", StudentCreate.as_view(), name="student-add"),
 ]
