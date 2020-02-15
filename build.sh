@@ -28,7 +28,7 @@ done
 
 function run-tests {
   if [[ $TESTS -eq "1" ]] ; then
-    docker-compose -f $DEV_COMPOSE run --rm now_active_backend pytest ./backend/tests/
+    docker-compose -f $DEV_COMPOSE run --rm backend pytest
   fi
 }
 

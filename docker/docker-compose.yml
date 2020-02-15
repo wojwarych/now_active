@@ -6,7 +6,7 @@ services:
     build:
       context: ..
     depends_on:
-      - "db"
+      - db
     volumes:
       - ../backend:/backend
       - ../docker:/docker
