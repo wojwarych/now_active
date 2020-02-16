@@ -9,10 +9,11 @@ services:
         - REQUIREMENTS=/tmp/requirements/requirements.dev.txt
     command: bash ../docker/run.sh -d
     depends_on:
-      - "db"
+      - db
     ports:
-      - "8000:8000"
+      - 8000:8000
     environment:
+      - POSTGRES_PASSWORD=password
       - POSTGRES_NAME=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_HOST=db
@@ -21,3 +22,5 @@ services:
     image: postgres
     ports:
     - 5433:5432
+    environment:
+      - POSTGRES_PASSWORD=password
