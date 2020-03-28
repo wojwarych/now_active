@@ -1,0 +1,16 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "username": "woj.warych@gmail.com",
+      "email": "woj.warych@gmail.com",
+      "password": "pbkdf2_sha256$150000$YWEf4pPfr4cd$9oDTUmoesm3oBKo6yFMzhkM4ZN6dEI5q3f1ps5DfY/4=",
+      "is_superuser": true,
+      "is_staff": true,
+      "is_active": true,
+      "last_login": null,
+      "date_joined": "2020-02-17T08:00:00Z"
+    }
+  }
+]
