@@ -18,6 +18,7 @@ services:
     container_name: now_active_postgres
     networks:
       - now_active_network
+
 networks:
   now_active_network:
     name: now_active_network

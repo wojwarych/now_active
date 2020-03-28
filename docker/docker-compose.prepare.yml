@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  migration:
+    image: now_active_backend
+    build:
+      context: ..
+    command: bash ../docker/prepare.sh
+    volumes:
+      - ../backend:/backend
+      - ../docker:/docker
+    depends_on:
+      - db
+    container_name: now_active_backend_prepare
+    env_file:
+      - ../local.env
+    networks:
+      - now_active_network
